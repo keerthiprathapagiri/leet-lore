@@ -13,12 +13,15 @@ public class Solution {
             fast=fast.next.next;
             slow=slow.next;
             if(fast==slow){
-                ListNode s=head;
-                while(s!=slow){
-                    s=s.next;
-                    slow=slow.next;
-                    
-                }return s;
+                ListNode f=head;
+                ListNode s=slow;
+                while(f!=s){
+                f=f.next;
+                s=s.next;
+                }
+                
+                return s;
+                
             }
         }
         return null;
